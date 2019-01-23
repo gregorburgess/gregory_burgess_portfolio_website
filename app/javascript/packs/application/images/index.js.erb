@@ -1,0 +1,35 @@
+
+// ----------------------------------------------------------
+// IMPORT IMAGES USING ONE OF THESE TWO STYLES:
+// ----------------------------------------------------------
+
+// ----------------------------------------------------------
+// 1)
+// ----------------------------------------------------------
+
+// import 'image1.png';
+// import 'image2.png';
+// ...
+// import 'imageN.png';
+
+// ********** OR ***********
+
+// ----------------------------------------------------------
+// 2)
+// ----------------------------------------------------------
+
+// <#% images_glob = Rails.application.root.join('app', 'javascript', 'application', 'images', '**', '*.{png,svg}') %>
+// <#% Dir.glob(images_glob).each do |image| %>
+//   import '<%#= image %>';
+// <#% end %>
+
+
+// ----------------------------------------------------------
+// USE THE FOLLLOWING N YOUR VIEWS TO REFERENCE AN IMAGE
+// ----------------------------------------------------------
+
+ // <%#= image_tag asset_pack_path("application/images/image1.png") %>
+
+
+// *Note that the complete path of the image is required, in this case, application/images.
+// Also in your Stylesheets file be sure to replace the image_url helper for just url and update images references to have the complete path.

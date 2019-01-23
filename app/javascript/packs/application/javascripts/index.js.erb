@@ -1,0 +1,23 @@
+import Rails from 'rails-ujs';
+import Turbolinks from 'turbolinks';
+import * as ActiveStorage from 'activestorage';
+
+Rails.start();
+Turbolinks.start();
+ActiveStorage.start();
+
+
+// For Ruby gems that includes Javascript, it might vary how to import them but for many, it will be as easy as importing the files from the gem.
+// import "<%= File.join(Gem.loaded_specs['mygem'].full_gem_path, 'app', 'assets', 'javascripts', 'myfile') %>";
+
+// We can use the same technique showed where an iteration is made to load the files.
+
+// <%# ['file1', 'file2'].each do |file| %>
+//  import "<%#= File.join(Gem.loaded_specs['mygem'].full_gem_path, 'app', 'assets', 'javascripts', file) %>";
+// <%# end %>
+// For our own files, again you can use the same technique used with Images or Stylesheets.
+
+// <%# files_glob = Rails.application.root.join('app', 'javascript', 'application', 'javascripts', '**', '*.js') %>
+// <%# Dir.glob(files_glob).each do |file| %>
+//   import '<%#= file %>';
+// <%# end %>

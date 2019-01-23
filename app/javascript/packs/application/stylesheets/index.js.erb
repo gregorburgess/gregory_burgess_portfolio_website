@@ -1,0 +1,38 @@
+// ----------------------------------------------------------
+// IMPORT STYLE SHEET USING ONE OF THESE TWO STYLES:
+// ----------------------------------------------------------
+
+// ----------------------------------------------------------
+// 1)
+// ----------------------------------------------------------
+
+// import 'application.css';
+// import 'layout.css';
+// ...
+// import 'buttons.css';
+
+
+// ********** OR ***********
+
+// ----------------------------------------------------------
+// 2)
+// ----------------------------------------------------------
+
+// <#% images_glob = Rails.application.root.join('app', 'javascript', 'application', 'images', '**', '*.{png,svg}') %>
+// <#% Dir.glob(images_glob).each do |image| %>
+//   import '<%#= image %>';
+// <#% end %>
+
+
+// ----------------------------------------------------------
+// NOTES
+// ------------------------------------------------------
+
+// Also if you have any gem that provides Stylesheets you can import them as follows:
+
+// import "<%#= File.join(Gem.loaded_specs['mygem'].full_gem_path, 'app', 'assets', 'stylesheets', 'myfile.css') %>";
+
+// *When you need to import more than one file from the gem then create an array with the name of each file and iterate over it for import.
+// If you are using SCSS, then your application file might be called application.scss, in this case, imports will happen with SCSS syntax which is ok. Just import your application.scss into index.js.erb and you will be fine, like this:
+
+// import 'application.scss';If you are using a CSS/SCSS framework via a gem, you better remove the gem and install it via NPM with Yarn.
